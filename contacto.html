@@ -1,0 +1,102 @@
+<?php
+    include_once('includes/email.php');
+
+    $enviado = false;
+    $error = false;
+    $errorvalidacion = false;
+    
+    if ($_POST)
+    {  
+	    if (($_POST['nombre'] != '') && ($_POST['empresa'] != '') && ($_POST['email'] != '') && ($_POST['telefono'] != '') && ($_POST['comentario'] != ''))	 
+	    {
+	        $nombre = $_POST['nombre'];
+	        $empresa = $_POST['empresa'];
+	        $email = $_POST['email'];
+	        $telefono = $_POST['telefono'];
+	        $comentario = $_POST['comentario'];
+	        
+	        $subject = '[contacto web]' . ($nombre ? (' ' . $nombre) : '') . ($email ? (' ' . $email) : '');
+	        
+	        $html = '<table width="500"><tr><td bgcolor="#191F39" colspan="2"></td></tr>';
+	        $html .= '<tr><td colspan="2"></td></tr>';  
+	        $html .= '<tr><td bgcolor="#f7f7f7" height="25" width="150" style="font-family:Arial; font-size:12px"><strong>Nombre y Apellido:</strong></td>';
+	        $html .= '<td bgcolor="#f7f7f7" style="font-family:Arial; font-size:12px; color:#666">' . $nombre . '</td></tr>';
+	        $html .= '<tr><td bgcolor="#f7f7f7" height="25" width="150" style="font-family:Arial; font-size:12px"><strong>Empresa:</strong></td>';
+	        $html .= '<td bgcolor="#f7f7f7" style="font-family:Arial; font-size:12px; color:#666">' . $empresa . '</td></tr>';
+	        $html .= '<tr><td bgcolor="#f7f7f7" height="25" width="150" style="font-family:Arial; font-size:12px"><strong>Tel&eacute;fono:</strong></td>';
+	        $html .= '<td bgcolor="#f7f7f7" style="font-family:Arial; font-size:12px; color:#666">' . $telefono . '</td></tr>';
+	        $html .= '<tr><td bgcolor="#f7f7f7" height="25" width="150" style="font-family:Arial; font-size:12px"><strong>Mail:</strong></td>';
+	        $html .= '<td bgcolor="#f7f7f7" style="font-family:Arial; font-size:12px; color:#666">' . $email . '</td></tr>';
+	        $html .= '<tr><td bgcolor="#f7f7f7" height="25" width="150" style="font-family:Arial; font-size:12px"><strong>Comentario:</strong></td>';
+	        $html .= '<td bgcolor="#f7f7f7" style="font-family:Arial; font-size:12px; color:#666">' . nl2br($comentario) . '</td></tr>';
+	        $html .= '</table>';
+	        
+	        if (($nombre != '') && ($empresa != '') && ($email != '') && ($telefono != '') && ($comentario != ''))
+	        {
+	          $enviado = Email::Enviar($subject, $email, $html);
+	        }
+	        else
+	        {
+	          $errorvalidacion = true;
+	        }  
+	    }
+	    else
+	    {
+	    	$errorvalidacion = true;
+	    }  
+    }
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<?php include('includes/head.php') ?>
+</head>
+<body>
+	<div id="wrapper">
+		<?php include('includes/header.php') ?>
+		<div id="img_top" class="nivoSlider">
+			<img src="/img/contacto.jpg" alt="" />
+			<img src="/img/contacto2.jpg" alt="" />
+			<img src="/img/contacto3.jpg" alt="" />
+		</div>
+<div id="content">
+			<div id="col1">
+			</div>
+			<div id="col2" class="contacto">
+				<div class="form">
+					<?php if ($errorvalidacion) { ?>
+					<p><b>Por favor complete todos los campos.</b></p>
+					<?php } ?>
+					<form action="" method="post">
+						<?php if ($enviado) { ?>
+			            <p><b>Gracias por contactarnos, a la brevedad le responderemos.</b></p>
+			            <?php } else { ?>
+						<label for="nombre">Nombre y Apellido</label>
+						<input type="text" name="nombre" id="nombre" />
+						<label for="empresa">Empresa</label>
+						<input type="text" name="empresa" id="empresa" />
+						<label for="email">E.mail</label>
+						<input type="text" name="email" id="email" />
+						<label for="telefono">Tel&eacute;fono</label>
+						<input type="text" name="telefono" id="telefono" />
+						<label for="comentario">Comentario</label>
+						<textarea name="comentario" id="comentario">
+						</textarea>
+						<input type="submit" value="Enviar" />
+						<?php } ?>
+					</form>
+				</div>
+				<div class="datos">
+					<h4>Oficina</h4>
+					<p>Rivadavia 666 - 4&deg; Piso<br />
+					(C1002AAR) Buenos Aires -  Argentina<br />
+					Tel | Fax : 0054 11 + 4343-6565 | 64 | 63<br />
+					Fax: 0054 11 + 4343-6565<br />
+					<b>lepalacio@lepalacio.com.ar</b></p>
+				</div>
+			</div>
+		</div> 
+<?php include('includes/footer.php') ?>
+</div>
+</body>
+</html>

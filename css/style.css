@@ -1,0 +1,171 @@
+html {background:transparent;}
+body {font-family:Arial;color:#BEB27F;background:#F0EEE3 url(/img/main_top_bg.jpg) repeat-x;}
+body.home {background:#F0EEE3 url(/img/main_home_top_bg.jpg) repeat-x;}
+a {text-decoration:none;}
+
+/* MAIN */
+
+#wrapper {width:970px;margin:auto;}
+
+#header{}
+	#menu_top {background:url(/img/menu_top_bg.gif) repeat-x;height:46px;}
+	#menu_top ul{padding-left:18px;line-height: 46px;line-height: 52px\9;overflow: hidden;
+	background:url(/img/menu_top_r.png) no-repeat right;height:46px;
+	padding-left:19px;
+	list-style:none;}
+	#menu_top ul li {padding-left: 16px;padding-left: 24px\9;
+	background: url(/img/top_menu_list.png) left center no-repeat;
+	float:left;padding-right:7px;letter-spacing:1px;letter-spacing:0\9;
+	margin-right: 34px;
+	text-shadow: 0px 0px 2px #F4F3EB;}
+	#menu_top ul li a{color:#5F5232;font-size:13px;text-transform:uppercase;font-weight:bold;margin-left:-1px\9;}
+	
+#img_top {border:5px solid #BEB381;}
+
+
+#menu_lateral {}
+img#reflejo {display:block}
+
+
+/* CONTENT */
+
+#content {background:#F9F8F4 url(/img/content_bg.gif) no-repeat top;padding:24px 5px;position:relative;overflow:hidden;color:#191919;}
+#content {min-height:317px}
+.home #content {min-height:0px;padding:24px 5px 34px;color:#BEB27F}
+
+/* FOOTER */
+
+#footer {height:50px;background:url(/img/footer_bg.gif) repeat-x top;position:relative;}
+#footer .datos {position:absolute;top:9px;color:#333333;font-size:14px;font-family:"Times New Roman";letter-spacing: 1px;}
+#footer #desarrollo {position:absolute;right:0;top:13px;}
+#footer #desarrollo img{vertical-align:middle;padding-left:2px;}
+#footer #desarrollo a {color:#999;font-size:8px;}
+
+/* HOME */
+#homebox1 {float:left;position:relative;height:266px;width:499px;}
+	#verpracticas {width:168px;height:25px;background:url(/img/home_verpracticas.png) no-repeat;position:absolute;bottom:-10px;left:0;text-align:center;line-height: 18px;	}
+	#verpracticas a{font-size:11px;color:#483E26;letter-spacing: 0.07em;}
+	.boxes {width:163px;height:121px;background:url(/img/homebox1_box.png) no-repeat;float:left;margin-right:5px;margin-bottom:5px;}
+	.boxes.last {margin-right:0;}
+	.boxes img {position:relative;left:5px;top:4px;}
+	.boxes h3 {position:relative;left:5px;top:10px;font-size:12px;width:154px;}
+	.boxes h3 a{color:#BEB27F;padding-left:1px;}
+	
+
+#homebox2 {background:url(/img/homebox2_bg.gif) repeat-x;height:247px;width:457px;float:right;}
+	#homebox2 .titulo {width:362px;margin:auto;height:18px;background:url(/img/home_h2_bg.gif) repeat-x;top:14px;position:relative;}
+	#homebox2 .titulo h2{font-size:18px;background:#262625 url(/img/home_h2_r.gif) no-repeat right;display:inline;padding-right:17px;}
+	#homebox2 .texto {width:362px;position:relative;top:39px;margin:auto;border-bottom:1px dashed #BEB27F; border-top: 1px dashed #BEB27F; padding-bottom:35px; padding-top: 35px}
+	#homebox2 .texto p {font-size:13px;line-height:142%;*line-height:130%;}
+	
+/* SECCIONES */
+
+#content #col1 {width:189px;float:left;min-height: 10px;}
+#content #col1 #menu_lateral {background:#040404 url(/img/menu_lateral_bg.png) repeat-x;width:168px;padding:15px 0 0;}
+#content #col1 #menu_lateral #reflejo {margin-top:15px;}
+#content #col1 #menu_lateral ul{background:url(/img/menu_lateral_item.gif) repeat-x bottom;width:153px;margin:auto}
+#content #col1 #menu_lateral ul li{background:url(/img/menu_lateral_item.gif) repeat-x top;padding:5px 0;line-height:100%;}
+#content #col1 #menu_lateral ul li a{color:#6C6C67;font-size:12px;}
+
+#content #col2 {
+	width:740px;
+	float:left;
+	border-left:1px dashed #BEB27F;
+	padding-left:20px;
+}
+#content #col2 h1{font-size:14px;text-transform:uppercase;font-weight:bold;margin-bottom:22px;}
+#content #col2 p {margin:19px 0;line-height:140%;}
+#content #col2 p,
+#content #col2 ul{font-size:12px;}
+#content #col2 ul{list-style-image:url(/img/content_bullet.png);list-style-position:inside;margin-left:20px;}
+#content #col2 ul li{line-height:140%;}
+
+/* CONTACTO */
+#content #col2.contacto {border:none;margin-top:-9px;}
+#content #col2.contacto .form {width:339px;float:left;}
+#content #col2.contacto .form form{width:283px; font-size: 12px; color:#ccc;}
+#content #col2.contacto .form form label{width:283px;display:block;color:#191919;font-size:12px;padding:8px 0 7px;}
+#content #col2.contacto .form form input,
+#content #col2.contacto .form form textarea{border:1px solid #676767;background-color:#F9F8F4;width:281px;}
+#content #col2.contacto .form form input{height:20px;}
+#content #col2.contacto .form form textarea{height:110px;}
+#content #col2.contacto .form form input[type="submit"]{height:36px;width:79px;border:none;background:url(/img/contacto_enviar.png) no-repeat;color:#473E26;font-size:11px;cursor:pointer;}
+
+#content #col2.contacto .datos {color:#191919;font-size:12px;}
+#content #col2.contacto .datos  h4{color:#191919;text-transform:uppercase;font-size:14px;font-weight:bold;margin-bottom:18px;margin-top:8px;}
+#content #col2.contacto .datos  p{line-height:140%}
+
+.clear{clear: both;}
+.fl{float:left;}
+.h317{height: 317px!important}
+.textos-socios {float:right; margin:0 7px 0 0!important; text-align: justify; width: 414px;}
+/*
+Skin Name: Nivo Slider Default Theme
+Skin URI: http://nivo.dev7studios.com
+Skin Type: flexible
+Description: The default skin for the Nivo Slider.
+Version: 1.0
+Author: Gilbert Pellegrom
+Author URI: http://dev7studios.com
+*/
+
+.nivoSlider {
+	position:relative;
+}
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+.nivoSlider a {
+	border:0;
+	display:block;
+}
+
+.nivo-controlNav {
+	position:absolute;
+	left:50%;
+	bottom:-42px;
+    margin-left:-40px; /* Tweak this to center bullets */
+}
+.nivo-controlNav a {
+	display:block;
+	width:22px;
+	height:22px;
+	background:url(/img/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:3px;
+	float:left;
+}
+.nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+.nivo-directionNav a {
+	display:block;
+	width:30px;
+	height:30px;
+	background:url(/img/arrows.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+a.nivo-nextNav {
+	background-position:-30px 0;
+	right:15px;
+}
+a.nivo-prevNav {
+	left:15px;
+}
+
+.nivo-caption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.nivo-caption a {
+    color:#fff;
+    border-bottom:1px dotted #fff;
+}
+.nivo-caption a:hover {
+    color:#fff;
+}
